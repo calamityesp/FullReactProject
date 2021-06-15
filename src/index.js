@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import HomePage from "./homepage.component";
+import HomePage from "./pages/homepage.component";
 
 ReactDOM.render(
   <React.StrictMode>
