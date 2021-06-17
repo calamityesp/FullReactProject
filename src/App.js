@@ -1,8 +1,21 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
+import HomePage from "./pages/homepage.component";
+import { Route } from "react-router-dom";
+
+const HatsPage = () => (
+  <div>
+    <h1>Hats Page</h1>
+  </div>
+);
 
 function App() {
-  return <div>Whats up pimpin</div>;
+  return (
+    <div>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/shop/hats" component={HatsPage} />
+    </div>
+  );
 }
 
 export default App;
