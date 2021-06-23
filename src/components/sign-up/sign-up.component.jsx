@@ -18,7 +18,7 @@ class SignUp extends React.Component {
     };
   }
 
-  handleSubmit = async (event) => {
+  handleSubmit = async event => {
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
@@ -30,12 +30,12 @@ class SignUp extends React.Component {
     }
 
     try {
-      const { users } = await auth.createUserWithEmailAndPassword(
+      const { user } = await auth.createUserWithEmailAndPassword(
         email,
         password
       );
 
-      await createUserProfileDocument(users, {displayName});
+      await createUserProfileDocument(user, {displayName});
       this.setState({
         displayName: "",
         email: "",
